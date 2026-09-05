@@ -1,0 +1,60 @@
+<style>
+  .container{
+    text-align: center;
+    background-color: aqua;
+    height: 25em;
+    width: 25em;
+    border-radius: 1em;
+    padding: 3em;
+    font-size: larger;
+    margin: auto;
+  }
+  .btn{
+    width: 5em;
+    height: 2em;
+    background-color: cornflowerblue;
+    font-size: large;
+    color: white;
+    border-radius: 1em;
+  }
+  .stylecss{
+    /* font-size: large; */
+    margin-left: 2em;
+    height: 3em;
+    width: 25em;
+    border-radius: 1em;
+  }
+</style>
+
+<form action="/authentication/login" method="post">
+  <div class="container col-8 offset-2" >
+    <h2>JOB-NEST</h2>
+    <div class="contant">
+      <div class="mb-6" style="text-align: center;">
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input type="text" class="form-control stylecss" name="username" id="exampleFormControlInput1" placeholder="username" required>
+      </div>
+      <br>
+      <div class="mb-6" style="text-align: center;">
+        <label for="inputPassword5" class="form-label" style="text-align: center;">Password</label>
+        <input type="password" id="inputPassword5" name="password" placeholder="your password" class="form-control stylecss" aria-describedby="passwordHelpBlock" required>
+      </div>
+      <br>
+      <div class="mb-6" style="text-align: center;">
+        <label for="role" class="form-label" style="text-align: center;">Role</label>
+        <input type="text"  name="role" placeholder="enter your role" class="form-control stylecss" required>
+      </div>
+      <p>Forgot?</p>
+      
+        <div class="col-auto " style="text-align: center;">
+          <a href="/authentication/login"><button type="submit" class="btn">SIGN-IN</button></a>
+        </div>
+        <p>Don't have an account?</p>
+        <a href="/authentication/register">register</a>
+    </div>
+  </div>
+  
+</form>
+
+    
+  

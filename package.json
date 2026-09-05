@@ -1,0 +1,31 @@
+{
+  "name": "JOBNEST",
+  "version": "1.0.0",
+  "description": "Job portal web application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "job-portal",
+    "express",
+    "ejs",
+    "mysql"
+  ],
+  "author": "Prince Agrawal",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "ejs": "^6.0.1",
+    "ejs-mate": "^4.0.0",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.23.4",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "uuid": "^14.0.2"
+  }
+}

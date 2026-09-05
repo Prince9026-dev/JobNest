@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Applications</h1>
+    <% if(applications.length === 0){ %>
+        <h3>No applications found</h3>
+    <% } else{ %>
+        <% applications.forEach(application => { %>
+            <div>
+                <h2><%= application.title %></h2>
+                <p>Status: <%= application.status %></p>
+                <p>Phone: <%= application.phone %></p>
+            </div>
+            <hr>
+        <% }) %>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<style>
+  .container{
+    text-align: center;
+    background-color: aqua;
+    height: 25em;
+    width: 25em;
+    border-radius: 1em;
+    padding: 3em;
+    font-size: larger;
+    margin: auto;
+  }
+  .btn{
+    width: 5em;
+    height: 2em;
+    background-color: cornflowerblue;
+    font-size: large;
+    color: white;
+    border-radius: 1em;
+  }
+  .stylecss{
+    /* font-size: large; */
+    margin-left: 2em;
+    height: 3em;
+    width: 25em;
+    border-radius: 1em;
+  }
+</style>
+
+<form action="/authentication/register" method="post">
+  <div class="container col-8 offset-2" >
+    <h2>JOB-NEST</h2>
+    <div class="contant">
+      <div class="mb-6" style="text-align: center;">
+        <label for="exampleFormControlInput1" class="form-label"> name</label>
+        <input type="text" class="form-control stylecss" id="exampleFormControlInput1" required>
+      </div>
+      <br>
+      <div class="mb-6" style="text-align: center;">
+        <label for="inputmail" class="form-label" style="text-align: center;">Email </label>
+        <input type="email" id="inputmail"  class="form-control stylecss"  required>
+    </div>
+    <br>
+    <div class="mb-6" style="text-align: center;">
+      <label for="inputPassword5" class="form-label" style="text-align: center;" aria-describedby="passwordHelpBlock">Password</label>
+      <input type="password" id="password"  class="form-control stylecss" required>
+    </div>
+    <br>
+    <div class="mb-6" style="text-align: center;">
+      <label for="role" class="form-label" style="text-align: center;">Role</label>
+      <input type="text" id="role" placeholder="enter your role" class="form-control stylecss" required>
+    </div>
+    <br>
+    <div class="mb-6" style="text-align: center;">
+      <label for="company" class="form-label" style="text-align: center;">Company</label>
+      <input type="text" id="company"  class="form-control stylecss" required>
+    </div>
+    <br>
+        <div class="col-auto " style="text-align: center;">
+          <button type="submit" class="btn">Register</button>
+        </div>
+        
+    </div>
+  </div>
+  
+</form>
+
+    
+  

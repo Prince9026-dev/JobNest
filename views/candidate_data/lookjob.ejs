@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jobs - JobNest</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        body {
+            background-color: #f5f7fb;
+        }
+
+        .job-card {
+            border-radius: 18px;
+            transition: all 0.25s ease;
+        }
+
+        .job-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13) !important;
+        }
+
+        .job-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background-color: #e8f0fe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            font-size: 22px;
+        }
+
+        .job-description {
+            color: #64748b;
+            min-height: 70px;
+        }
+
+        .info-item {
+            color: #475569;
+        }
+
+        .skill-badge {
+            background-color: #eef2ff;
+            color: #3730a3;
+            font-weight: 500;
+        }
+
+        .apply-btn {
+            transition: all 0.2s ease;
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-1px);
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark"
+         style="background-color: #0f172a;">
+
+        <div class="container">
+
+            <!-- Logo -->
+
+            <a class="navbar-brand fw-bold fs-4"
+               href="/authentication">
+
+                <span style="color: #3b82f6;">JOB</span>NEST
+
+            </a>
+
+
+            <!-- Mobile button -->
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navbar links -->
+
+            <div class="collapse navbar-collapse"
+                 id="navbarNav">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <!-- Jobs -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active px-3"
+                           href="/studentjobsearch/<%= id %>">
+
+                            Jobs
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- My Applications -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link px-3"
+                           href="#">
+
+                            My Applications
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Profile -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link px-3"
+                           href="#">
+
+                            <i class="fa-regular fa-circle-user fs-5"></i>
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= ALL JOBS ================= -->
+
+    <div class="container py-5">
+
+
+        <!-- Heading -->
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                Find Your Next Job
+            </h2>
+
+            <p class="text-muted">
+                Explore opportunities and apply for the job that matches your skills.
+            </p>
+
+        </div>
+
+
+        <!-- Job Cards -->
+
+        <div class="row g-4">
+
+
+            <% for(let job of r){ %>
+
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+
+                    <div class="card job-card border-0 shadow-sm h-100">
+
+
+                        <div class="card-body p-4">
+
+
+                            <!-- Job Header -->
+
+                            <div class="d-flex align-items-center mb-3">
+
+                                <div class="job-icon me-3">
+
+                                    <i class="fa-solid fa-briefcase"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h5 class="fw-bold mb-1">
+
+                                        <%- job.title %>
+
+                                    </h5>
+
+                                    <small class="text-muted">
+
+                                        Job ID:
+                                        <%- job.job_id %>
+
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Description -->
+
+                            <p class="job-description mb-3">
+
+                                <%- job.description %>
+
+                            </p>
+
+
+                            <!-- Location -->
+
+                            <div class="info-item mb-2">
+
+                                <i class="fa-solid fa-location-dot text-primary me-2"></i>
+
+                                <span>
+                                    <%- job.location %>
+                                </span>
+
+                            </div>
+
+
+                            <!-- Salary -->
+
+                            <div class="info-item mb-3">
+
+                                <i class="fa-solid fa-indian-rupee-sign text-primary me-2"></i>
+
+                                <span>
+                                    <%- job.salary %>
+                                </span>
+
+                            </div>
+
+
+                            <!-- Skills -->
+
+                            <div class="mb-3">
+
+                                <small class="text-muted d-block mb-2">
+                                    Skills Required
+                                </small>
+
+                                <span class="badge skill-badge rounded-pill px-3 py-2">
+
+                                    <%- job.skills %>
+
+                                </span>
+
+                            </div>
+
+
+                            <!-- Created At -->
+
+                            <div class="text-muted small mb-3">
+
+                                <i class="fa-regular fa-calendar me-1"></i>
+
+                                Posted:
+                                <%- job.created_at %>
+
+                            </div>
+
+
+                            <hr>
+
+
+                            <!-- Apply -->
+
+                            <form
+                                action="/apply/<%- job.job_id %>/<%- id %>"
+                                method="get">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary w-100 apply-btn">
+
+                                    <i class="fa-solid fa-paper-plane me-2"></i>
+
+                                    Apply Now
+
+                                </button>
+
+                            </form>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            <% } %>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

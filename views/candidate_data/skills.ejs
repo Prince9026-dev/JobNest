@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKILLS</title>
+</head>
+<body>
+    <h2>Select Your Skills</h2>
+    
+    <form action="/candidate/<%= candidate_id %>/skills" method="post">
+        <% skills.forEach(skill => { %>
+            <label>
+                <input
+                    type="checkbox"
+                    name="skills"
+                    value="<%= skill.skill_id %>">
+                <%= skill.skill_name %>
+            </label>
+            <br>
+        <% }) %>
+        <button type="submit">Save Skills</button>
+    </form>
+
+
+</body>
+</html>
