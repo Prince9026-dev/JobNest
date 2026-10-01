@@ -1,3 +1,4 @@
+require("dotenv").config();
 const mysql = require("mysql2");
 const fs = require("fs");
 
@@ -8,7 +9,7 @@ const connection = mysql.createConnection({
     database: "defaultdb",
     password: process.env.DB_PASSWORD,
     ssl: {
-        ca: fs.readFileSync("ca.pem")
+        ca: process.env.DB_CA
     }
 });
 

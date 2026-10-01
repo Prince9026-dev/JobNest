@@ -1,4 +1,5 @@
 require("dotenv").config();
+console.log("Password loaded:", !!process.env.DB_PASSWORD);
 // requiring of packages
 const express = require("express");
 const mysql = require("mysql2");
