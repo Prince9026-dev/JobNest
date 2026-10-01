@@ -35,22 +35,6 @@ app.set("views",path.join(__dirname, "views"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
-// establishing connection of mysql2 
-// const connection = mysql.createConnection({
-//     host: "jobnest-db0-princuuu-6a41.l.aivencloud.com",
-//     port: "19996",
-//     user: "avnadmin",
-//     database: "defaultdb",
-//     password: process.env.DB_PASSWORD,
-//     ssl: {
-//         ca: fs.readFileSync("ca.pem")
-//     }
-// })
-// connection.connect((err) => {
-//     if (err) {console.log(err);}
-//     else {console.log("connected");}
-// });
-
 // routes
 // root route
 app.get("/", (req, res) => {
@@ -83,10 +67,11 @@ app.get("/show", (req, res) => {
 
 
 // set up server
-app.listen(8080, () => {
-    // res.send("Port Listening at 8080");
-    console.log("Port Listening at 8080");
-})
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+    console.log(`Port Listening at ${PORT}`);
+});
 
 // logout route
 // app.get("/authentication/logout", (req, res) => {
