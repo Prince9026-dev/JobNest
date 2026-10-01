@@ -1,0 +1,628 @@
+/* .container-fluid{
+    display: flex;
+    margin: 0 2em 0 1.5em;
+    font-size: larger;
+}
+.navbar-brand{
+    margin-right: 45em;
+}
+.navbar-nav{
+    background-color: aqua;
+    width: 210%;
+    display: flex;
+    justify-content: space-around;
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.jobnest-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 12px 0;
+}
+
+.jobnest-logo {
+    color: white !important;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: .3px;
+}
+
+.jobnest-logo i {
+    margin-right: 8px;
+    color: #22c7b8;
+}
+
+.jobnest-navbar .nav-link {
+    color: #e7e7e7 !important;
+    margin: 0 13px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.jobnest-navbar .nav-link:hover {
+    color: #22c7b8 !important;
+}
+
+.signin-btn {
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 17px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.signin-btn:hover {
+    background: white;
+    color: #292929;
+}
+
+.navbar-toggler {
+    color: white;
+    border: 1px solid rgba(255,255,255,.4);
+}
+
+
+/* ================= HERO ================= */
+
+.hero-section {
+    position: relative;
+    min-height: 620px;
+    background: #292929;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-shape {
+    position: absolute;
+    width: 100%;
+    height: 430px;
+    left: -8%;
+    bottom: -210px;
+    background: white;
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 5;
+    padding-top: 70px;
+}
+
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content {
+    padding-left: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-small-title {
+    color: #22c7b8;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.hero-small-title i {
+    margin-right: 7px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.08;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    color: #22c7b8;
+}
+
+.hero-description {
+    color: #aaa;
+    max-width: 530px;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.create-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 22px;
+    background: #22aaa9;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.create-btn:hover {
+    background: #1b918f;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.explore-btn {
+    color: white;
+    text-decoration: none;
+    padding: 13px 18px;
+}
+
+.explore-btn:hover {
+    color: #22c7b8;
+}
+
+
+/* ================= JOB ILLUSTRATION ================= */
+
+.job-illustration {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+
+/* Main card */
+
+.main-job-card {
+    position: absolute;
+    width: 420px;
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    left: 35px;
+    top: 70px;
+    transform: rotate(-7deg);
+    box-shadow: 0 25px 60px rgba(0,0,0,.35);
+}
+
+.job-card-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.company-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 13px;
+    background: #e7f8f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1daaa7;
+    font-size: 23px;
+}
+
+.job-card-top h5 {
+    margin: 0;
+    color: #222;
+    font-weight: 700;
+}
+
+.job-card-top p {
+    margin: 4px 0 0;
+    color: #888;
+    font-size: 13px;
+}
+
+.job-details {
+    display: flex;
+    gap: 18px;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #777;
+}
+
+.job-details i {
+    color: #22aaa9;
+    margin-right: 4px;
+}
+
+.skills {
+    margin-top: 22px;
+}
+
+.skills span {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 15px;
+    background: #f1f5f5;
+    color: #555;
+    font-size: 11px;
+    margin-right: 5px;
+}
+
+.apply-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 11px;
+    color: #999;
+}
+
+.apply-row button {
+    border: none;
+    background: #22aaa9;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 15px;
+}
+
+
+/* Floating cards */
+
+.floating-card {
+    position: absolute;
+    background: white;
+    border-radius: 13px;
+    padding: 13px 17px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    z-index: 5;
+}
+
+.floating-card strong {
+    display: block;
+    font-size: 12px;
+    color: #333;
+}
+
+.floating-card small {
+    display: block;
+    color: #888;
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+.card-one {
+    top: 20px;
+    left: 5px;
+    transform: rotate(-4deg);
+}
+
+.card-two {
+    bottom: 25px;
+    right: 10px;
+    transform: rotate(5deg);
+}
+
+.small-icon,
+.round-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #e9f7f6;
+    color: #22aaa9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.round-icon {
+    border-radius: 50%;
+}
+
+
+/* ================= EXPLORE ================= */
+
+.explore-section {
+    background: white;
+    padding: 80px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #333;
+}
+
+.section-heading h2 span {
+    color: #1eaaa7;
+}
+
+.section-heading p {
+    color: #777;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+
+/* Feature cards */
+
+.feature-card {
+    height: 100%;
+    padding: 30px;
+    border-radius: 15px;
+    background: #f8fafc;
+    border: 1px solid #edf0f2;
+    transition: .3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.feature-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+.blue {
+    background: #e5f5ff;
+    color: #159be0;
+}
+
+.green {
+    background: #e7f8ee;
+    color: #29a85c;
+}
+
+.orange {
+    background: #fff2df;
+    color: #dc941c;
+}
+
+.feature-card h4 {
+    font-size: 20px;
+    margin-bottom: 13px;
+}
+
+.feature-card p {
+    color: #777;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.feature-card a {
+    color: #159be0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.feature-card a i {
+    margin-left: 6px;
+}
+
+
+/* ================= COMPANIES ================= */
+
+.companies-section {
+    padding: 80px 0;
+    background: #f4f7f9;
+}
+
+.companies-content {
+    background: #292929;
+    border-radius: 20px;
+    padding: 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.badge-text {
+    color: #22c7b8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.companies-content h2 {
+    font-size: 34px;
+    margin: 13px 0;
+}
+
+.companies-content h2 span {
+    color: #22c7b8;
+}
+
+.companies-content p {
+    color: #aaa;
+    max-width: 600px;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.company-btn {
+    white-space: nowrap;
+    background: #22aaa9;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.company-btn:hover {
+    background: #1b918f;
+    color: white;
+}
+
+
+/* ================= FOOTER ================= */
+
+.jobnest-footer {
+    background: #202020;
+    color: white;
+    padding: 35px 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.footer-logo i {
+    color: #22c7b8;
+    margin-right: 6px;
+}
+
+.footer-content p {
+    color: #999;
+    margin: 8px 0;
+}
+
+.footer-content span {
+    color: #666;
+    font-size: 12px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+
+    .jobnest-navbar {
+        background: #292929;
+    }
+
+    .jobnest-navbar .navbar-nav {
+        padding: 20px 0;
+        align-items: flex-start !important;
+    }
+
+    .jobnest-navbar .nav-link {
+        margin: 7px 0;
+    }
+
+    .signin-btn {
+        display: inline-block;
+        margin-top: 8px;
+    }
+
+    .hero-section {
+        min-height: 850px;
+        padding-bottom: 100px;
+    }
+
+    .hero-content {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .job-illustration {
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .companies-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .hero-section {
+        min-height: 850px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .job-illustration {
+        transform: scale(.78);
+        transform-origin: top center;
+        height: 320px;
+    }
+
+    .main-job-card {
+        width: 360px;
+        left: 0;
+    }
+
+    .card-one {
+        left: -10px;
+    }
+
+    .card-two {
+        right: -10px;
+    }
+
+    .companies-content {
+        padding: 30px 20px;
+    }
+
+    .companies-content h2 {
+        font-size: 27px;
+    }
+}
