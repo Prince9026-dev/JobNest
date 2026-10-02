@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 // routes
 // root route
 app.get("/", (req, res) => {
-    console.log("I am root");
+    res.redirect("/authentication");
 })
 
 app.use(session(sessionOption))
