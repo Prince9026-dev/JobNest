@@ -67,7 +67,9 @@ module.exports.getApply = (req, res) => {
 // applyed job
 module.exports.applyJob = (req, res) => {
     let {job_id, user_id} = req.params;
-    let {name, email, phone, resume} = req.body;
+    let {phone} = req.body;
+    // Uploaded resume comes from req.file 
+    let resume = req.file ? req.file.path : null;
     let data = [job_id, user_id,  resume, phone]
     let q = "insert into applications(user_id, job_id, resume, phone) values(?,?,?,?)";
     connection.query(q, data, (err, r) => {

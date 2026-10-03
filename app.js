@@ -66,6 +66,16 @@ app.get("/show", (req, res) => {
     })
 })
 
+app.use((err, req, res, next) => {
+    console.error("🔥 JOBNEST ERROR:");
+    console.error(err);
+    console.error(err.stack);
+
+    res.status(500).send(`
+        <h1>JobNest Internal Server Error</h1>
+        <pre>${err.stack || err.message || err}</pre>
+    `);
+});
 
 // set up server
 const PORT = process.env.PORT || 8080;
